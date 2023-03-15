@@ -1,0 +1,17 @@
+function isFibonacci(num) {
+  let a = 0;
+  let b = 1;
+  while (b < num) {
+    const temp = b;
+    b += a;
+    a = temp;
+  }
+  return b === num || num === 0;
+}
+
+const num = prompt("Digite um número: ");
+
+if (isFibonacci(num)) {
+  console.log(`O número ${num} pertence à sequência de Fibonacci.`);
+} else {
+  console.log(`O número ${num} não pertence à sequência de Fibonacci.`);
